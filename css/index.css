@@ -19,11 +19,24 @@ body {
 }
 
 .navBtns {
+  display: none;
   height: 8%;
-  padding-left: 10px;
-  width: 140px;
+  width: 150px;
 }
 
 #blankSpace {
   height: 60%;
+}
+
+.sidebarlogoContainer {
+  width: 0%;
+  height: 8%;
+}
+
+.sidebarlogo {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  width: 40px;
 }
