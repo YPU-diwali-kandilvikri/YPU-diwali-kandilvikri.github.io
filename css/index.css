@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+#mainGrid {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: Calibri;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fa0;
+}
+
+#pageDisplay {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.navBtns {
+  height: 8%;
+  padding-left: 10px;
+  width: 140px;
+}
+
+#blankSpace {
+  height: 60%;
+}
