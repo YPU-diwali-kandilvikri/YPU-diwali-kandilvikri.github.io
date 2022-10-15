@@ -35,8 +35,16 @@ body {
 
 .sidebarlogo {
   margin: 0;
+  padding-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
   height: 40px;
   width: 40px;
+}
+
+.jpplogo {
+  height: 60px;
+  width: 60px;
+  margin-left: 8px;
+  margin-top: 8px;
 }
