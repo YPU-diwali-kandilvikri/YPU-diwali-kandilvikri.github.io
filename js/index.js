@@ -4,6 +4,9 @@ const aboutBtns = document.querySelectorAll(".aboutBtn");
 const lanternsBtns = document.querySelectorAll(".lanternsBtn");
 const earthernlampsBtns = document.querySelectorAll(".earthernlampsBtn");
 const offersBtns = document.querySelectorAll(".offersBtn");
+const navBtns = document.querySelectorAll(".navBtns");
+const sidebarlogos = document.querySelectorAll(".sidebarlogo");
+
 homeBtns.forEach((homeBtn) => {
   homeBtn.addEventListener("click", () => {
     pageDisplay.src = "home.html";
@@ -30,8 +33,6 @@ offersBtns.forEach((offersBtn) => {
   });
 });
 
-const navBtns = document.querySelectorAll(".navBtns");
-const sidebarlogos = document.querySelectorAll(".sidebarlogo");
 sidebarlogos.forEach((sidebarlogo) => {
   sidebarlogo.addEventListener("mouseover", () => {
     navBtns.forEach((navBtn) => {
@@ -44,17 +45,31 @@ sidebarlogos.forEach((sidebarlogo) => {
     sidebarlogo.parentNode.style.backgroundColor = "#fa0";
     sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#fa0";
   });
-  navBtns.forEach((navBtn) => {
-    navBtn.addEventListener("mouseover", () => {
-      navBtn.style.backgroundColor = "#c80";
-      navBtn.previousElementSibling.style.backgroundColor = "#c80";
-    });
-    navBtn.addEventListener("mouseout", () => {
-      navBtn.style.backgroundColor = "#fa0";
-      navBtn.previousElementSibling.style.backgroundColor = "#fa0";
-      navBtns.forEach((navBtn) => {
+  sidebarlogo.addEventListener("click", () => {
+    navBtns.forEach((navBtn) => {
+      if (navBtn.style.display != "none") {
         navBtn.style.display = "none";
-      });
+      } else {
+        navBtn.style.display = "table-cell";
+      }
+    });
+  });
+});
+navBtns.forEach((navBtn) => {
+  navBtn.addEventListener("mouseover", () => {
+    navBtn.style.backgroundColor = "#c80";
+    navBtn.previousElementSibling.style.backgroundColor = "#c80";
+  });
+  navBtn.addEventListener("mouseout", () => {
+    navBtn.style.backgroundColor = "#fa0";
+    navBtn.previousElementSibling.style.backgroundColor = "#fa0";
+    navBtns.forEach((navBtn) => {
+      navBtn.style.display = "none";
+    });
+  });
+  navBtn.addEventListener("click", () => {
+    navBtns.forEach((navBtn) => {
+      navBtn.style.display = "none";
     });
   });
 });
