@@ -5,7 +5,7 @@ lanterns.forEach((lantern) => {
   let price = lantern.getAttribute("price");
   let componentCode = /*html*/ `
 <div class="card">
-    <img class="lantern-img" src="${imageUrl}" alt=""></img><br/>
+    <a href="${imageUrl}" target="_blank"><img class="lantern-img" src="${imageUrl}" alt=""></img></a><br/>
     <span class="card-title text-glow">${name} - ${price}</span>
 </div>
     `;
