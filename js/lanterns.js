@@ -27,7 +27,7 @@ for (let z = 0; z < 6; z++) {
       const lantern = document.createElement("lantern");
       let lantern_code = lanternPricePairs[i].code;
       let price = lanternPricePairs[i].price;
-      lantern.setAttribute("img", `./images/${lantern_code}.jpg`);
+      lantern.setAttribute("img", `./images/lanterns/${lantern_code}.jpg`);
       lantern.setAttribute("name", lantern_code);
       lantern.setAttribute("price", price);
       row.appendChild(cell);
@@ -50,7 +50,7 @@ lanterns.forEach((lantern) => {
   let price = lantern.getAttribute("price");
   let componentCode = /*html*/ `
 <div class="card">
-    <a href="${imageUrl}" target="_blank"><img class="lantern-img" src="${imageUrl}" alt=""></img></a><br/>
+    <a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
     <span class="card-title text-glow">${name} - Rs. ${price}</span>
 </div>
     `;
