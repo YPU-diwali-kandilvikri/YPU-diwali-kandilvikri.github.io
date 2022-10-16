@@ -53,8 +53,8 @@ sidebarlogos.forEach((sidebarlogo) => {
     sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#c80";
   });
   sidebarlogo.addEventListener("mouseout", () => {
-    sidebarlogo.parentNode.style.backgroundColor = "#fa0";
-    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#fa0";
+    sidebarlogo.parentNode.style.backgroundColor = "#d90";
+    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#d90";
   });
   sidebarlogo.addEventListener("click", () => {
     navBtns.forEach((navBtn) => {
@@ -72,8 +72,8 @@ navBtns.forEach((navBtn) => {
     navBtn.previousElementSibling.style.backgroundColor = "#c80";
   });
   navBtn.addEventListener("mouseout", () => {
-    navBtn.style.backgroundColor = "#fa0";
-    navBtn.previousElementSibling.style.backgroundColor = "#fa0";
+    navBtn.style.backgroundColor = "#d90";
+    navBtn.previousElementSibling.style.backgroundColor = "#d90";
     navBtns.forEach((navBtn) => {
       navBtn.style.display = "none";
     });

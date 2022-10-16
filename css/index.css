@@ -16,7 +16,7 @@ body {
   font-size: 20px;
   height: 100vh;
   width: 100vw;
-  background-color: #fa0;
+  background-color: #d90;
 }
 
 #pageDisplay {
@@ -34,6 +34,12 @@ body {
 #blankSpace {
   height: 60%;
 }
+
+/* .earthernlampsBtn,
+.aboutBtn,
+#blankSpace {
+  background-color: #fa0;
+} */
 
 .sidebarlogoContainer {
   width: 0%;
@@ -62,6 +68,11 @@ body {
 }
 .heading {
   color: #000;
+  font-weight: bold;
+}
+
+.titleBarContainer {
+  background-color: #fa0;
 }
 
 @media (max-width: 426px) {
