@@ -14,12 +14,11 @@ body {
 }
 
 .headingContainer {
-  margin-top: 40px;
   text-align: center;
   font-size: 25px;
   padding: 5px;
   color: #fc0;
-  text-shadow: 0 0 10px #fc0;
+  text-shadow: 0 0 10px #f50;
   height: 60px;
 }
 

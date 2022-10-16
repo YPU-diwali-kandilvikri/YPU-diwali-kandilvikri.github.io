@@ -2,15 +2,23 @@ body {
   margin: 0;
   height: 100vh;
 }
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-column-gap: 3%;
+  grid-row-gap: 20px;
+}
 
 .card {
   text-align: center;
-  margin-top: 20px;
-  margin-left: 10%;
-  width: 90%;
-  box-shadow: 0 0 5px #fc0;
+  width: 100%;
+  box-shadow: 0 0 5px #f50;
   border-radius: 20px;
 }
+.cardGird:nth-child(3n + 1) div {
+  margin-left: 10%;
+}
+
 .img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -24,5 +32,11 @@ body {
 
 .text-glow {
   color: #fc0;
-  text-shadow: 0 0 10px #fc0;
+  text-shadow: 0 0 10px #f50;
+}
+
+@media (max-width: 426px) {
+  .cardGrid {
+    grid-template-columns: 100%;
+  }
 }
