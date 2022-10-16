@@ -16,7 +16,7 @@ body {
   border-radius: 20px;
 }
 .cardGird:nth-child(3n + 1) div {
-  margin-left: 10%;
+  margin-left: 10px;
 }
 
 .img {
