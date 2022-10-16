@@ -33,8 +33,20 @@ table.content {
 
 table.content tr td {
   font-size: 25px;
+  color: #ff0;
 }
 table.content tr td img {
   height: 60%;
   width: 100%;
+}
+@media (max-width: 426px) {
+  .heading {
+    font-size: 30px;
+  }
+  .headingContainer {
+    font-size: 20px;
+  }
+  table.content tr td {
+    font-size: 20px;
+  }
 }
