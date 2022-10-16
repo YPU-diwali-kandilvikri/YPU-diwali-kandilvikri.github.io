@@ -1,4 +1,4 @@
-const earthernLampsTable = document.querySelector("#earthern_lamps");
+const cardGrid = document.querySelector(".cardGrid");
 const earthernLampPrices = [
   { imageName: "4set1", price: 90 },
   { imageName: "4set2", price: 90 },
@@ -16,41 +16,28 @@ const earthernLampPrices = [
   { imageName: "6set", price: 120 },
 ];
 
-for (let z = 0; z < 6; z++) {
-  const row = document.createElement("tr");
-  for (let i = 0; i < 3; i++) {
-    if (earthernLampPrices[i]) {
-      const cell = document.createElement("td");
-      const lantern = document.createElement("lantern");
-      let lantern_imageName = earthernLampPrices[i].imageName;
-      let price = earthernLampPrices[i].price;
-      lantern.setAttribute(
-        "img",
-        `./images/earthern_lamps/${lantern_imageName}.jpg`
-      );
-      lantern.setAttribute("price", price);
-      row.appendChild(cell);
-      cell.appendChild(lantern);
-    } else {
-      break;
-    }
-  }
-  earthernLampPrices.splice(0, 3);
-  earthernLampsTable.appendChild(row);
-}
+earthernLampPrices.forEach((earthernLampPrice) => {
+  const earthernLamp = document.createElement("earthernLamp");
+  earthernLamp.setAttribute(
+    "img",
+    `images/earthern_lamps/${earthernLampPrice.imageName}.jpg`
+  );
+  earthernLamp.setAttribute("price", `${earthernLampPrice.price}`);
+  cardGrid.appendChild(earthernLamp);
+});
+const blankSpace = document.createElement("div");
+blankSpace.innerHTML = /*html*/ `<span colspan="3" style="color: #000; text-shadow: none">Blank</span>`;
+cardGrid.appendChild(blankSpace);
 
-const lanterns = document.querySelectorAll("lantern");
-lanterns.forEach((lantern) => {
-  let imageUrl = lantern.getAttribute("img");
-  let price = lantern.getAttribute("price");
-  let componentimageName = /*html*/ `
+const earthernLamps = document.querySelectorAll("earthernLamp");
+earthernLamps.forEach((earthernLamp) => {
+  let imageUrl = earthernLamp.getAttribute("img");
+  let price = earthernLamp.getAttribute("price");
+  let componentCode = /*html*/ `
 <div class="card">
     <a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
     <span class="card-title text-glow">Rs. ${price}</span>
 </div>
     `;
-  lantern.innerHTML = componentimageName;
+  earthernLamp.innerHTML = componentCode;
 });
-const blankSpace = document.createElement("tr");
-blankSpace.innerHTML = /*html*/ `<td colspan="3" style="color: #000; text-shadow: none">Blank</td>`;
-earthernLampsTable.appendChild(blankSpace);
