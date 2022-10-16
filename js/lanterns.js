@@ -39,6 +39,9 @@ for (let z = 0; z < 6; z++) {
   lanternPricePairs.splice(0, 3);
   lanternsTable.appendChild(row);
 }
+const blankSpace = document.createElement("tr");
+blankSpace.innerHTML = /*html*/ `<td colspan="3" style="color: #000; text-shadow: none">Blank</td>`;
+lanternsTable.appendChild(blankSpace);
 
 const lanterns = document.querySelectorAll("lantern");
 lanterns.forEach((lantern) => {
