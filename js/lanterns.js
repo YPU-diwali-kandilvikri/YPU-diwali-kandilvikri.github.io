@@ -1,4 +1,4 @@
-const lanternsTable = document.querySelector("#lanterns");
+const cardGrid = document.querySelector(".cardGrid");
 const lanternPricePairs = [
   { code: "A1K_BLUE", price: 250 },
   { code: "A1K_LBLUE", price: 250 },
@@ -19,29 +19,16 @@ const lanternPricePairs = [
   { code: "A1KV", price: 300 },
 ];
 
-for (let z = 0; z < 6; z++) {
-  const row = document.createElement("tr");
-  for (let i = 0; i < 3; i++) {
-    if (lanternPricePairs[i]) {
-      const cell = document.createElement("td");
-      const lantern = document.createElement("lantern");
-      let lantern_code = lanternPricePairs[i].code;
-      let price = lanternPricePairs[i].price;
-      lantern.setAttribute("img", `./images/lanterns/${lantern_code}.jpg`);
-      lantern.setAttribute("name", lantern_code);
-      lantern.setAttribute("price", price);
-      row.appendChild(cell);
-      cell.appendChild(lantern);
-    } else {
-      break;
-    }
-  }
-  lanternPricePairs.splice(0, 3);
-  lanternsTable.appendChild(row);
-}
-const blankSpace = document.createElement("tr");
-blankSpace.innerHTML = /*html*/ `<td colspan="3" style="color: #000; text-shadow: none">Blank</td>`;
-lanternsTable.appendChild(blankSpace);
+lanternPricePairs.forEach((lanternPricePair) => {
+  const lantern = document.createElement("lantern");
+  lantern.setAttribute("img", `images/lanterns/${lanternPricePair.code}.jpg`);
+  lantern.setAttribute("name", `${lanternPricePair.code}`);
+  lantern.setAttribute("price", `${lanternPricePair.price}`);
+  cardGrid.appendChild(lantern);
+});
+const blankSpace = document.createElement("div");
+blankSpace.innerHTML = /*html*/ `<span colspan="3" style="color: #000; text-shadow: none">Blank</span>`;
+cardGrid.appendChild(blankSpace);
 
 const lanterns = document.querySelectorAll("lantern");
 lanterns.forEach((lantern) => {
