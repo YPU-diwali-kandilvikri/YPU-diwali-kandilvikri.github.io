@@ -37,12 +37,6 @@ earthernlampsBtns.forEach((earthernlampsBtn) => {
     sessionStorage.setItem("page", "earthern_lamps.html");
   });
 });
-offersBtns.forEach((offersBtn) => {
-  offersBtn.addEventListener("click", () => {
-    pageDisplay.src = "offers.html";
-    sessionStorage.setItem("page", "offers.html");
-  });
-});
 
 sidebarlogos.forEach((sidebarlogo) => {
   sidebarlogo.addEventListener("mouseover", () => {
