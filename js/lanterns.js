@@ -21,7 +21,10 @@ const lanternPricePairs = [
 
 lanternPricePairs.forEach((lanternPricePair) => {
   const lantern = document.createElement("lantern");
-  lantern.setAttribute("img", `images/lanterns/${lanternPricePair.code}.jpg`);
+  lantern.setAttribute(
+    "img",
+    `images/lanterns/${lanternPricePair.code}-min.jpg`
+  );
   lantern.setAttribute("name", `${lanternPricePair.code}`);
   lantern.setAttribute("price", `${lanternPricePair.price}`);
   cardGrid.appendChild(lantern);
