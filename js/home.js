@@ -19,7 +19,7 @@ langSelector.addEventListener("click", () => {
     langSelector.innerHTML = "English";
   }
   if (language == "English") {
-    heading.innerHTML = "Jnana Prabodhini Prashala - Yuvak Vibhag";
+    heading.innerHTML = "Jnana Prabodhini - Yuvak Vibhag";
     subheading1.innerHTML = "Lanterns and Earthern Lamps Sale Activity";
     subheading2.innerHTML =
       "Offers and Discounts will be given! Be sure to visit our stall soon!";
