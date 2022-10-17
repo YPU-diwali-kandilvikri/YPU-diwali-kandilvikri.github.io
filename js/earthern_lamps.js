@@ -17,27 +17,17 @@ const earthernLampPrices = [
 ];
 
 earthernLampPrices.forEach((earthernLampPrice) => {
-  const earthernLamp = document.createElement("earthernLamp");
-  earthernLamp.setAttribute(
-    "img",
-    `images/earthern_lamps/${earthernLampPrice.imageName}.jpg`
-  );
-  earthernLamp.setAttribute("price", `${earthernLampPrice.price}`);
+  const earthernLamp = document.createElement("div");
+  earthernLamp.className = "card";
+  let imageUrl = `images/earthern_lamps/${earthernLampPrice.imageName}-min.jpg`;
+  let price = earthernLampPrice.price;
+  let componentCode = /*html*/ `
+<a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
+<span class="card-title text-glow">Rs. ${price}</span>
+    `;
+  earthernLamp.innerHTML = componentCode;
   cardGrid.appendChild(earthernLamp);
 });
 const blankSpace = document.createElement("div");
 blankSpace.innerHTML = /*html*/ `<span colspan="3" style="color: #000; text-shadow: none">Blank</span>`;
 cardGrid.appendChild(blankSpace);
-
-const earthernLamps = document.querySelectorAll("earthernLamp");
-earthernLamps.forEach((earthernLamp) => {
-  let imageUrl = earthernLamp.getAttribute("img");
-  let price = earthernLamp.getAttribute("price");
-  let componentCode = /*html*/ `
-<div class="card">
-    <a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
-    <span class="card-title text-glow">Rs. ${price}</span>
-</div>
-    `;
-  earthernLamp.innerHTML = componentCode;
-});

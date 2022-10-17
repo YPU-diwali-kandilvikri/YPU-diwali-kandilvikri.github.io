@@ -20,29 +20,18 @@ const lanternPricePairs = [
 ];
 
 lanternPricePairs.forEach((lanternPricePair) => {
-  const lantern = document.createElement("lantern");
-  lantern.setAttribute(
-    "img",
-    `images/lanterns/${lanternPricePair.code}-min.jpg`
-  );
-  lantern.setAttribute("name", `${lanternPricePair.code}`);
-  lantern.setAttribute("price", `${lanternPricePair.price}`);
+  const lantern = document.createElement("div");
+  lantern.className = "card";
+  let imageUrl = `images/lanterns/${lanternPricePair.code}-min.jpg`;
+  let name = lanternPricePair.code;
+  let price = lanternPricePair.price;
+  let componentCode = /*html*/ `
+<a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
+<span class="card-title text-glow">${name} - Rs. ${price}</span>
+`;
+  lantern.innerHTML = componentCode;
   cardGrid.appendChild(lantern);
 });
 const blankSpace = document.createElement("div");
 blankSpace.innerHTML = /*html*/ `<span colspan="3" style="color: #000; text-shadow: none">Blank</span>`;
 cardGrid.appendChild(blankSpace);
-
-const lanterns = document.querySelectorAll("lantern");
-lanterns.forEach((lantern) => {
-  let imageUrl = lantern.getAttribute("img");
-  let name = lantern.getAttribute("name");
-  let price = lantern.getAttribute("price");
-  let componentCode = /*html*/ `
-<div class="card">
-    <a href="${imageUrl}" target="_blank"><img class="img" src="${imageUrl}" alt=""></img></a><br/>
-    <span class="card-title text-glow">${name} - Rs. ${price}</span>
-</div>
-    `;
-  lantern.innerHTML = componentCode;
-});

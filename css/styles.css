@@ -25,6 +25,16 @@ body {
 .heading {
   font-size: 40px;
 }
+
+.homeImg1 {
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+.homeImg2 {
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
 table.content {
   margin: 0;
   padding: 0;
@@ -49,4 +59,15 @@ table.content tr td img {
   table.content tr td {
     font-size: 20px;
   }
+}
+.langSelectorContainer {
+  text-align: right;
+}
+#langSelector {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #fa0;
+  border: none;
+  margin: 10px;
+  font-weight: bold;
 }
