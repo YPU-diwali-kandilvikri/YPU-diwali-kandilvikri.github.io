@@ -74,7 +74,7 @@ table.content tr td img {
 #langSelector {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  background-color: #fa0;
+  background-color: #ffc34d;
   border: none;
   margin: 10px;
   font-weight: bold;

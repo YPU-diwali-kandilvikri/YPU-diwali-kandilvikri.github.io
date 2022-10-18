@@ -43,13 +43,12 @@ sidebarlogos.forEach((sidebarlogo) => {
     navBtns.forEach((navBtn) => {
       navBtn.style.display = "table-cell";
     });
-    sidebarlogo.parentNode.style.backgroundColor = "#c80";
-    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#c80";
+    sidebarlogo.parentNode.style.backgroundColor = "#eecc99";
+    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#eecc99";
   });
   sidebarlogo.addEventListener("mouseout", () => {
-    sidebarlogo.parentNode.style.backgroundColor = "rgb(255, 191, 0)";
-    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor =
-      "rgb(255, 191, 0)";
+    sidebarlogo.parentNode.style.backgroundColor = "#ffdd99";
+    sidebarlogo.parentNode.nextElementSibling.style.backgroundColor = "#ffdd99";
   });
   sidebarlogo.addEventListener("click", () => {
     navBtns.forEach((navBtn) => {
@@ -63,12 +62,12 @@ sidebarlogos.forEach((sidebarlogo) => {
 });
 navBtns.forEach((navBtn) => {
   navBtn.addEventListener("mouseover", () => {
-    navBtn.style.backgroundColor = "#c80";
-    navBtn.previousElementSibling.style.backgroundColor = "#c80";
+    navBtn.style.backgroundColor = "#eecc99";
+    navBtn.previousElementSibling.style.backgroundColor = "#eecc99";
   });
   navBtn.addEventListener("mouseout", () => {
-    navBtn.style.backgroundColor = "rgb(255, 191, 0)";
-    navBtn.previousElementSibling.style.backgroundColor = "rgb(255, 191, 0)";
+    navBtn.style.backgroundColor = "#ffdd99";
+    navBtn.previousElementSibling.style.backgroundColor = "#ffdd99";
     navBtns.forEach((navBtn) => {
       navBtn.style.display = "none";
     });
