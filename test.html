@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .mainGrid {
+        width: 100%;
+        height: 100vh;
+        border-spacing: 0;
+      }
+      .jpplogo,
+      .titleBar,
+      .sidebarlogo,
+      .sidebarButton {
+        padding: 10px;
+        height: 8%;
+      }
+      .blankSpace {
+        height: 60%;
+      }
+      .jpplogo {
+        background-color: pink;
+      }
+      .titleBar {
+        background-color: red;
+      }
+      .sidebarlogo {
+        background-color: cyan;
+      }
+      .sidebarButton {
+        display: none;
+        background-color: blue;
+      }
+      .blankSpace {
+        background-color: yellow;
+      }
+      .pageDisplay {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="mainGrid" cellspacing="" 0>
+      <tr>
+        <td class="jpplogo">JPP</td>
+        <td class="titleBar" colspan="2">Yuvak Prabodhan Udyog</td>
+      </tr>
+      <tr>
+        <td class="sidebarlogo">H</td>
+        <td class="sidebarButton">Home</td>
+
+        <td rowspan="5">
+          <iframe class="pageDisplay" src="home.html" frameborder="0"></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td class="sidebarlogo">A</td>
+        <td class="sidebarButton">About us</td>
+      </tr>
+      <tr>
+        <td class="sidebarlogo">L</td>
+        <td class="sidebarButton">Lanterns</td>
+      </tr>
+      <tr>
+        <td class="sidebarlogo">E</td>
+        <td class="sidebarButton">Earthern Lamps</td>
+      </tr>
+      <tr>
+        <td class="blankSpace" colspan="2"></td>
+      </tr>
+    </table>
+  </body>
+</html>

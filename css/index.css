@@ -16,28 +16,22 @@ body {
   font-size: 20px;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(255, 191, 0);
-}
-
-#pageDisplay {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
+  background-color: #ffdd99;
 }
 
 .navBtns {
   display: none;
-  height: 8%;
+  height: 12%;
   width: 150px;
 }
 
 #blankSpace {
-  height: 60%;
+  height: 40%;
 }
 
 .sidebarlogoContainer {
   width: 0%;
-  height: 8%;
+  height: 12%;
 }
 
 .sidebarlogo {
@@ -67,7 +61,7 @@ body {
 }
 
 .titleBarContainer {
-  background-color: rgb(255, 145, 0);
+  background-color: #ffc34d;
 }
 
 @media (max-width: 426px) {
@@ -89,4 +83,10 @@ body {
   .headingContainer {
     padding: 0;
   }
+}
+
+#pageDisplay {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
 }
