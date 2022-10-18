@@ -19,6 +19,19 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/index.js" defer></script>
     <title>Diwali Vikri Upakram</title>
+    <style>
+      .smaller-images {
+        height: 45px;
+        width: 45px;
+        padding-left: 8px;
+      }
+      @media (max-width: 426px) {
+        .smaller-images {
+          height: 35px;
+          width: 35px;
+        }
+      }
+    </style>
   </head>
   <body>
     <table id="mainGrid" cellspacing="0">
@@ -51,7 +64,11 @@
       </tr>
       <tr>
         <td class="sidebarlogoContainer lanternsBtn">
-          <img src="sidebar logos/lanterns.png" alt="" class="sidebarlogo" />
+          <img
+            src="sidebar logos/lanterns.png"
+            alt=""
+            class="sidebarlogo smaller-images"
+          />
         </td>
         <td class="navBtns lanternsBtn">आकाश कंदील</td>
       </tr>
@@ -60,7 +77,7 @@
           <img
             src="sidebar logos/earthern_lamp.png"
             alt=""
-            class="sidebarlogo"
+            class="sidebarlogo smaller-images"
           />
         </td>
         <td class="navBtns earthernlampsBtn">पणत्या</td>
