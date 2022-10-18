@@ -6,7 +6,6 @@ const contact = document.querySelector(".contact");
 
 // Form elements
 const langSelector = document.querySelector("#langSelector");
-console.log(langSelector);
 langSelector.addEventListener("click", () => {
   let language = langSelector.innerHTML;
   if (language == "मराठी") {

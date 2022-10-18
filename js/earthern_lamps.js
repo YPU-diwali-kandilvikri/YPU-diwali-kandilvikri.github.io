@@ -29,5 +29,5 @@ earthernLampPrices.forEach((earthernLampPrice) => {
   cardGrid.appendChild(earthernLamp);
 });
 const blankSpace = document.createElement("div");
-blankSpace.innerHTML = /*html*/ `<span colspan="3" style="color: #000; text-shadow: none">Blank</span>`;
+blankSpace.innerHTML = /*html*/ `<span colspan="3" style="opacity: 0; text-shadow: none">Blank</span>`;
 cardGrid.appendChild(blankSpace);
