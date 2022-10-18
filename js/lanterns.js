@@ -33,5 +33,9 @@ lanternPricePairs.forEach((lanternPricePair) => {
   cardGrid.appendChild(lantern);
 });
 const blankSpace = document.createElement("div");
-blankSpace.innerHTML = /*html*/ `<span colspan="3" style="opacity: 0; text-shadow: none">Blank</span>`;
-cardGrid.appendChild(blankSpace);
+blankSpace.innerHTML = /*html*/ `<span colspan="3" style="opacity: 0; text-shadow: none;">Blank</span>`;
+const fragment = new DocumentFragment();
+for (let i = 0; i < 2; i++) {
+  fragment.appendChild(blankSpace.cloneNode(true));
+}
+cardGrid.appendChild(fragment);
