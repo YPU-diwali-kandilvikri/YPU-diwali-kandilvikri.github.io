@@ -8,73 +8,56 @@
     <style>
       body {
         margin: 0;
+        overflow: hidden;
       }
       .mainGrid {
+        display: grid;
+        grid-template-columns: min-content min-content min-content min-content 1fr;
+        grid-template-rows: 60px min-content 1fr;
         width: 100%;
         height: 100vh;
         border-spacing: 0;
       }
       .jpplogo,
       .titleBar,
-      .sidebarlogo,
       .sidebarButton {
         padding: 10px;
-        height: 8%;
-      }
-      .blankSpace {
-        height: 60%;
       }
       .jpplogo {
         background-color: pink;
       }
       .titleBar {
         background-color: red;
-      }
-      .sidebarlogo {
-        background-color: cyan;
+        grid-column: 2 / -1;
       }
       .sidebarButton {
-        display: none;
         background-color: blue;
+        white-space: nowrap;
       }
       .blankSpace {
         background-color: yellow;
       }
       .pageDisplay {
+        grid-column: 1 / -1;
+      }
+      .pageDisplay iframe {
         width: 100%;
         height: 100%;
       }
     </style>
   </head>
   <body>
-    <table class="mainGrid" cellspacing="" 0>
-      <tr>
-        <td class="jpplogo">JPP</td>
-        <td class="titleBar" colspan="2">Yuvak Prabodhan Udyog</td>
-      </tr>
-      <tr>
-        <td class="sidebarlogo">H</td>
-        <td class="sidebarButton">Home</td>
-
-        <td rowspan="5">
-          <iframe class="pageDisplay" src="home.html" frameborder="0"></iframe>
-        </td>
-      </tr>
-      <tr>
-        <td class="sidebarlogo">A</td>
-        <td class="sidebarButton">About us</td>
-      </tr>
-      <tr>
-        <td class="sidebarlogo">L</td>
-        <td class="sidebarButton">Lanterns</td>
-      </tr>
-      <tr>
-        <td class="sidebarlogo">E</td>
-        <td class="sidebarButton">Earthern Lamps</td>
-      </tr>
-      <tr>
-        <td class="blankSpace" colspan="2"></td>
-      </tr>
-    </table>
+    <div class="mainGrid">
+      <div class="jpplogo">JPP</div>
+      <div class="titleBar">Yuvak Prabodhan Udyog</div>
+      <div class="sidebarButton">Home</div>
+      <div class="sidebarButton">About Us</div>
+      <div class="sidebarButton">Lanterns</div>
+      <div class="sidebarButton">Earthern Lamps</div>
+      <div class="blankSpace"></div>
+      <div class="pageDisplay">
+        <iframe src="home.html" frameborder="0"></iframe>
+      </div>
+    </div>
   </body>
 </html>

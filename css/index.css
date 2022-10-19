@@ -13,41 +13,25 @@ body {
 #mainGrid {
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content min-content 1fr;
   font-size: 20px;
   height: 100vh;
   width: 100vw;
   background-color: #ffdd99;
 }
 
+.headingContainer {
+  padding: 0;
+  grid-column: 2 / -1;
+}
+
 .navBtns {
-  display: none;
-  height: 8%;
-  width: 150px;
+  padding: 10px;
+  white-space: nowrap;
 }
 
-#blankSpace {
-  height: 40%;
-}
-
-.sidebarlogoContainer {
-  width: 0%;
-  height: 8%;
-}
-
-.sidebarlogo {
-  margin: 0;
-  padding-top: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  width: 40px;
-}
-
-.aboutlogo {
-  height: 35px;
-  width: 35px;
-  padding-left: 12px;
-}
 .jpplogo {
   height: 60px;
   width: 60px;
@@ -60,7 +44,9 @@ body {
   text-shadow: none;
 }
 
-.titleBarContainer {
+.titleBarContainer,
+.headingContainer {
+  height: 100%;
   background-color: #ffc34d;
 }
 
@@ -83,6 +69,10 @@ body {
   .headingContainer {
     padding: 0;
   }
+}
+
+.pageDisplay {
+  grid-column: 1 / -1;
 }
 
 #pageDisplay {
