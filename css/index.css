@@ -71,6 +71,11 @@ body {
   background-color: #ffc34d;
 }
 
+.blankSpace {
+  display: none;
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 426px) {
   .navlogos {
     height: 30px;
@@ -92,6 +97,10 @@ body {
   }
   .headingContainer {
     padding: 0;
+  }
+  .blankSpace {
+    display: block;
+    height: 50px;
   }
 }
 
